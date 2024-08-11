@@ -1,0 +1,111 @@
+<section id="nosotros"
+class="flex flex-col justify-center items-center bg-[#13151a] md:pt-10 md:pb-12 md:px-10 px-9 pb-16">
+
+    <div class="px-3 py-12 md:p-5">
+
+        <h2 id="titulo-nosotros" class="md:pb-5 text-3xl md:text-4xl text-white font-dm font-semibold">¿Por que elegirnos?</h2>
+
+    </div>
+
+    <div class="flex justify-center md:flex-row md:my-5 flex-col items-start md:gap-x-10 gap-y-10">
+
+        <article id="articulo" class="flex flex-col w-auto md:w-96 gap-y-5 md:gap-y-3">
+
+            <h3 class="text-xl text-center text-white font-dm font-medium">
+                <i class="pr-1 fa-solid fa-ruler-combined"></i>
+                Diseño y Fabricación a Medida
+            </h3>
+
+            <p class="text-base text-center text-balance text-[#c0c0c0] font-poppins font-extralight leading-relaxed md:leading-normal">
+                Desde elegantes armarios hasta funcionales escritorios,nuestros profesionales trabajan en colaboración con usted para crear muebles personalizados que se adapten perfectamente a su espacio.
+            </p>
+        </article>
+
+        <article id="articulo" class="flex flex-col w-auto md:w-96 gap-y-3">
+            
+            <h3 class="text-xl text-center text-white font-dm font-medium">
+                <i class="pr-1 fa-solid fa-truck-ramp-box"></i>
+                Envío gratis
+            </h3>
+
+            <p class="text-base text-center text-balance text-[#c0c0c0] font-poppins font-extralight leading-relaxed md:leading-normal">
+                Nos esforzamos por hacer que la experiencia de compra sea lo más conveniente y accesible posible para nuestros clientes.
+            </p>
+        </article>
+
+        <article id="articulo" class="flex flex-col w-auto md:w-96 gap-y-3">
+
+            <h3 class="text-xl text-center text-white font-dm font-medium">
+                <i class="pr-1 fa-solid fa-hammer"></i>
+                Instalación gratis
+            </h3>
+
+            <p class="text-base text-center text-balance text-[#c0c0c0] font-poppins font-extralight leading-relaxed md:leading-normal">
+                En cada uno de los productos nos encargamos de la instalación, asegurando de que sea una experiencia sin problemas y satisfactoria para nuestros clientes.   
+            </p>
+        </article>
+
+    </div>
+</section>
+
+<style>
+    h2::selection{
+    background-color: #b47844bc;
+    color: #000;
+  }
+  h3::selection{
+    background-color: #b47844bc;
+    color: #000;
+  }
+  p::selection{
+    background-color: #b47844bc;
+    color: #000;
+  }
+
+
+
+    #articulo{
+
+        view-timeline-name: --content;
+        view-timeline-axis: block;
+
+        animation-timeline: --content;
+        animation-name: show-title;
+        animation-range: entry 25% cover 55%;
+        animation-fill-mode: both;
+    }
+
+    @keyframes show-title {
+        from{
+            opacity: 0;
+            transform: translateY(70%);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    #titulo-nosotros{
+        view-timeline-name: --content;
+        view-timeline-axis: block;
+
+        animation-timeline: --content;
+        animation-name: fade-in;
+        animation-range: entry 20% cover 90%;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fade-in {
+        from{
+            opacity: 0;
+            transform: translateY(250%);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+</style>

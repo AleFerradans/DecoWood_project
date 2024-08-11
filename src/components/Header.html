@@ -1,0 +1,183 @@
+<header
+  id="nav-area"
+  class="fle flex-row pb-2 justify-center items-center w-full
+  fixed top-0 
+  bg-black/10 backdrop-blur-sm z-20 transition-all duration-200">
+  
+
+  <!--NAVBAR-->
+  <nav
+    class="flex justify-between items-center gap-x-12 w-[90%] mx-auto md:items-end"
+  >
+  <!--LOGO-->
+    <div class="flex flex-row relative gap-x-1 z-50 px-5 items-baseline justify-center pt-2 md:w-auto">
+      <img src="./logo-home.svg" class="h-6 md:h-8" alt="DecoWood logo" />
+      <a
+      href="#inicio"
+      id="decowood"
+      class="font-semibold text-white font-dm text-xl tracking-wider hover:scale-[1.02] transition-all duration-300 
+      md:text-2xl">
+      Deco<span style="color: #b47844; user-select: none" class="font-light"
+        >Wood</span>
+    </a>
+    </div>
+      
+
+    <!--ul-->
+    <div id="nav-content" class="nav-links absolute z-40 bg-gray-600 sm:bg-gray-600 md:bg-transparent top-0 left-0 h-0 w-full flex items-center md:pb-0 px-6 transition-all duration-300 overflow-hidden
+    md:static md:h-fit md:w-auto md:px-0">
+
+      <ul class="flex flex-col gap-y-10 pl-2 items-baseline
+      md:items-end w-full md:w-fit md:gap-[4vw] md:pl-0 md:flex-row">
+
+        <li class="block w-full"> 
+          <a
+            onclick="onToggleMenu(this)"
+            id="nav-link" 
+            class="text-white hover:text-white/70 tracking-wide text-base font-poppins transition duration-300 active:bg-black/30 md:hover:bg-transparent md:active:translate-y-[2px] hover:bg-black/10 w-full block pl-2 py-2 md:pl-0 md:py-0"
+            href="#nosotros"
+            >Nosotros</a
+          >
+        </li>
+
+        <li class="block w-full">
+          <a
+            onclick="onToggleMenu(this)"
+            id="nav-link"
+            class="text-white hover:text-white/70 tracking-wide text-base font-poppins transition duration-300 active:bg-black/30 md:hover:bg-transparent md:active:translate-y-[2px] hover:bg-black/10 w-full block pl-2 py-2 md:pl-0 md:py-0"
+            href="#productos"
+            >Productos</a
+          >
+        </li>
+
+        <li class="block w-full">
+          <a
+            onclick="onToggleMenu(this)"
+            id="nav-link"
+            class="text-white hover:text-white/70 tracking-wide text-base font-poppins transition duration-300 active:bg-black/30 md:hover:bg-transparent md:active:translate-y-[2px] hover:bg-black/10 w-full block pl-2 py-2 md:pl-0 md:py-0"
+            href="#servicios"
+            >Servicios</a
+          >
+        </li>
+
+        <li class="block w-full">
+          <a id="nav-link"
+            onclick="onToggleMenu(this)"
+            class="text-white hover:text-white/70 tracking-wide text-base font-poppins transition duration-300 active:bg-black/30 md:hover:bg-transparent md:active:translate-y-[2px] hover:bg-black/10 w-full block pl-2 py-2 md:pl-0 md:py-0"
+            href="#contacto"
+            >Contacto</a
+          >
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!--Menu responsive-->
+    <div class="absolute right-5 top-2 flex items-center z-50">
+      <ion-icon onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden text-gray-300 active:scale-95" name="menu"></ion-icon>
+    </div>
+
+  </nav>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</header>
+
+
+<!--SCRIPT MENU RESPONSIVE-->
+<script>
+  const navLinks = document.querySelector('.nav-links')
+
+  function onToggleMenu(e){
+    e.name = e.name === 'menu' ? 'menu' : 'menu'
+    navLinks.classList.toggle('h-[55vh]')
+  }
+
+</script>
+
+
+
+
+<!--SCRIPT SCROLL NAVBAR-->
+<script type="text/javascript">
+  let lastScrollTop = 0;
+  header = document.getElementById("nav-area");
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      header.style.top = "-80px";
+    } else {
+      header.style.top = "0px";
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+<!--Estilos Animacion-->
+<style>
+  a::selection {
+    background-color: #b47844bc;
+    color: #000;
+  }
+</style>
+
+<!-- ESTILO NAVLINK -->
+<style>
+  *:before,
+  *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #nav-link {
+    position: relative;
+    letter-spacing: 0.5px;
+  }
+
+  #nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #a8a8a8;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0px;
+    transition: all 0.3s ease;
+  }
+
+  #nav-link:hover::after {
+    width: 100%;
+  }
+
+  a::selection {
+    background-color: #b47844bc;
+    color: #000;
+  }
+</style>
+
+<!-- ANIMACION TEXTO LOGO -->
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script>
+  const myText = new SplitType("#decowood");
+
+  gsap.to(".char", {
+    y: 0,
+    stagger: 0.05,
+    delay: 0.2,
+    duration: 0.8,
+  });
+</script>
+
+<style>
+  #decowood {
+    overflow: hidden;
+  }
+  .char {
+    transform: translateY(115px);
+    transition: transform 0.5s;
+  }
+</style>

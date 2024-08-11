@@ -1,0 +1,144 @@
+<section
+  class="flex justify-center items-center w-[full] bg-[#b47844bc] py-16 md:py-24"
+  id="servicios"
+>
+  <div class="flex flex-col justify-center items-center pb-5 md:pb-10 px-10 md:px-20">
+        <article id="content-titulo" class="pb-14">
+            <h3
+                id="titulo-servicios"
+                class="block text-3xl md:text-5xl text-black font-dm font-bold text-left">
+                Nuestros Servicios
+            </h3>
+        </article>
+
+        <ul 
+            class="flex flex-col md:flex-row justify-center gap-y-10 md:gap-x-10">
+            <li class="servicio1 w-[90%] flex flex-col gap-y-3">
+                <h4 class="text-xl md:text-2xl font-playfair font-semibold">
+                Cotización de Producto sin Costo
+                </h4>
+                <p class="text-pretty font-normal text-lg md:text-xl leading-normal text-black/85">
+                En Deco Wood, entendemos la importancia de tomar decisiones informadas
+                al momento de elegir los muebles y servicios adecuados para tu hogar.
+                Es por eso que ofrecemos cotizaciones de productos sin ningún costo.
+                </p>
+            </li>
+
+            <li class="servicio2 w-[90%] flex flex-col gap-y-3">
+                <h4 class="text-xl md:text-2xl font-playfair font-semibold">
+                Fabricación y Diseño de Muebles
+                </h4>
+                <p class="text-pretty font-normal text-lg md:text-xl leading-normal text-black/85">
+                Nos enorgullece ofrecer servicios de fabricación y diseño de
+                muebles personalizados para satisfacer las necesidades y preferencias
+                únicas de cada cliente.
+                </p>
+            </li>
+            <li class="servicio3 w-[90%] flex flex-col gap-y-3">
+                <h4 class="text-xl md:text-2xl font-playfair font-semibold">
+                Soporte y Asesoramiento
+                </h4>
+                <p class="text-pretty font-normal text-lg md:text-xl leading-normal text-black/85">
+                Ofrecemos soporte y asesoramiento, ya sea que necesites ayuda
+                con la selección de muebles, asesoramiento sobre diseño de interiores
+                o asistencia con cualquier otra consulta relacionada con nuestros
+                servicios.
+                </p>
+            </li>
+        </ul>
+  </div>
+</section>
+
+<style>
+
+  #content-titulo {
+    view-timeline-name: --content;
+    view-timeline-axis: block;
+
+    animation-timeline: --content;
+    animation-name: mostrar;
+    animation-range: entry 20% cover 70%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes mostrar {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .servicio1{
+    view-timeline-name: --servicio1;
+    view-timeline-axis: block;
+
+    animation-timeline: --servicio1;
+    animation-name: mostrar-servicios;
+    animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes mostrar-servicios {
+    from {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  .servicio2{
+    view-timeline-name: --servicio2;
+    view-timeline-axis: block;
+
+    animation-timeline: --servicio2;
+    animation-name: mostrar-servicios;
+    animation-range: entry 15% cover 35%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes mostrar-servicios {
+    from {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  .servicio3{
+    view-timeline-name: --servicio3;
+    view-timeline-axis: block;
+
+    animation-timeline: --servicio3;
+    animation-name: mostrar-servicios;
+    animation-range: entry 30% cover 45%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes mostrar-servicios {
+    from {
+      opacity: 0;
+      transform: translateX(-70%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  h4::selection{
+    color: #000;
+    background-color: #b47844bc;
+  }
+</style>

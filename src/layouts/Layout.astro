@@ -1,0 +1,58 @@
+---
+// Supports weights 100-900
+import '@fontsource-variable/dm-sans';
+// Supports weights 400-900
+import '@fontsource-variable/playfair-display';
+import '@fontsource/poppins';
+
+interface Props {
+  title: string;
+}
+
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  </head>
+
+  <body>
+
+    <slot />
+
+
+    <script src="https://kit.fontawesome.com/70c8b821c7.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
